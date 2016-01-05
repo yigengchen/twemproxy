@@ -1,0 +1,13 @@
+leaf:
+  listen: 0.0.0.0:EXPOSE_PORT
+  hash: fnv1a_64
+  distribution: ketama
+  auto_eject_hosts: true
+  server_retry_timeout: 2000
+  server_failure_limit: 1
+  servers:
+   - REDIS_MASTER_01:PORT_01:1
+   - REDIS_MASTER_02:PORT_02:1
+   - REDIS_MASTER_03:PORT_03:1
+   - REDIS_MASTER_04:PORT_04:1
+   - REDIS_MASTER_05:PORT_05:1
