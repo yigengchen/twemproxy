@@ -16,4 +16,4 @@ sed -i 's/PORT_05/'$MY_REDIS_PORT_05'/g'  ./nutcracker.leaf.yml.template
 
 cp -rf nutcracker.leaf.yml.template  ./conf/nutcracker.leaf.yml
 
-./src/nutcracker -d -c ./conf/nutcracker.leaf.yml
+./src/nutcracker -c ./conf/nutcracker.leaf.yml
