@@ -1,14 +1,14 @@
 FROM openshift/base-centos7
-RUN yum install telnet 
-RUN yum install lsof 
-RUN yum install make 
-RUN yum install automake  
-RUN yum install curl 
-RUN yum install libtool
-RUN yum install python2.7 
-RUN yum install python-pip vim
-RUN yum install -qy 
-RUN yum install vim 
+RUN yum install -y telnet 
+RUN yum install -y lsof 
+RUN yum install -y make 
+RUN yum install -y automake  
+RUN yum install -y curl 
+RUN yum install -y libtool
+RUN yum install -y python2.7 
+RUN yum install -y python-pip
+RUN yum install -y -qy
+RUN yum install -y vim 
 ENV TIME_ZONE=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 RUN mkdir -p /src/twemproxy
