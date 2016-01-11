@@ -13,6 +13,7 @@ sed -i 's/PORT_02/'$MY_REDIS_PORT_02'/g'  ./nutcracker.leaf.yml.template
 sed -i 's/PORT_03/'$MY_REDIS_PORT_03'/g'  ./nutcracker.leaf.yml.template
 sed -i 's/PORT_04/'$MY_REDIS_PORT_04'/g'  ./nutcracker.leaf.yml.template
 sed -i 's/PORT_05/'$MY_REDIS_PORT_05'/g'  ./nutcracker.leaf.yml.template
+sed -i 's/EXPOSE_PORT/'$MY_EXPOSE_PORT'/g'  ./nutcracker.leaf.yml.template
 
 cp -rf nutcracker.leaf.yml.template  ./conf/nutcracker.leaf.yml
 
