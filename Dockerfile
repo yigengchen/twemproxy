@@ -8,6 +8,5 @@ WORKDIR /src/twemproxy
 RUN cd  /src/twemproxy
 RUN autoreconf -fvi & ./configure --enable-debug=log & make
 EXPOSE 9000
-ADD start.sh /start.sh
 RUN chmod a+x start.sh
 CMD ./start.sh
