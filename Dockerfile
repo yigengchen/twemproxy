@@ -1,14 +1,15 @@
-FROM ubuntu:15.10
-RUN apt-get update
-RUN apt-get install telnet 
-RUN apt-get install lsof 
-RUN apt-get install make 
-RUN apt-get install automake  
-RUN apt-get install curl 
-RUN apt-get installpython2.7 
-RUN apt-get install python-pip vim
-RUN apt-get install -qy 
-RUN apt-get install vim 
+FROM openshift/base-centos7
+RUN yum install  update
+RUN yum install telnet 
+RUN yum install lsof 
+RUN yum install make 
+RUN yum install automake  
+RUN yum install curl 
+RUN yum install libtool
+RUN yum install python2.7 
+RUN yum install python-pip vim
+RUN yum install -qy 
+RUN yum install vim 
 ENV TIME_ZONE=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 RUN mkdir -p /src/twemproxy
