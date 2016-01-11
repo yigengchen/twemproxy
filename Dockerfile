@@ -1,5 +1,5 @@
 FROM openshift/base-centos7
-RUN yum install -y telnet  libtool python2.7 python-pip  -qy  vim 
+RUN yum install -y telnet  libtool python2.7 python-pip vim 
 ENV TIME_ZONE=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 RUN mkdir -p /src/twemproxy
