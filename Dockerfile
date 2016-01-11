@@ -1,7 +1,7 @@
 FROM ubuntu:15.10
 RUN apt-get update
 RUN apt-get install telnet lsof make automake  curl python2.7 
-RUN apt-get install -y python-pip -qy vim
+RUN apt-get install python-pip -qy vim
 ENV TIME_ZONE=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 RUN mkdir -p /src/twemproxy
