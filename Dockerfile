@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:15.10
 RUN apt-get update
 RUN apt-get install telnet lsof libtool make automake  curl python2.7 
 RUN apt-get install -y python-pip -qy vim
