@@ -1,5 +1,4 @@
 FROM openshift/base-centos7
-RUN yum install  update
 RUN yum install telnet 
 RUN yum install lsof 
 RUN yum install make 
