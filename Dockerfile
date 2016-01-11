@@ -5,7 +5,7 @@ RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /
 RUN mkdir -p /src/twemproxy
 COPY . /src/twemproxy
 WORKDIR /src/twemproxy
-RUN autoreconf -fvi & ./configure --enable-debug=log & make
+RUN autoreconf -fvi && ./configure --enable-debug=log && make
 EXPOSE 9000
 RUN chmod a+x start.sh
 CMD ./start.sh
